@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TodoListUI from './TodoListUI'
 import store from './store'
-import {changeInputAction,addItemAction,deleteItemAction} from './store/actionCreators'
+import {changeInputAction,addItemAction,deleteItemAction,getListAction} from './store/actionCreators'
 
 export default class TodoList extends Component {
   constructor(){
@@ -12,6 +12,18 @@ export default class TodoList extends Component {
     this.deleteItem=this.deleteItem.bind(this);
     store.subscribe(this.storeChange);
   }
+  componentDidMount(){
+    setTimeout(() => {
+      let data={
+        data:{
+          list:['a','b','c']
+        }
+      }
+      const action=getListAction(data);
+      store.dispatch(action);
+    }, 5000);
+  }
+
   changeInputValue=(e)=>{
     const action=changeInputAction(e.target.value)
     store.dispatch(action)
