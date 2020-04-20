@@ -18,3 +18,17 @@ export const getListAction=(data)=>({
   type:GET_LIST,
   data
 })
+
+export const getTodoList=()=>{
+  return (dispatch)=>{
+    setTimeout(() => {
+      let data={
+        data:{
+          list:['a','b','c']
+        }
+      }
+      const action=getListAction(data);
+      dispatch(action);
+    }, 5000);
+  }
+}
