@@ -21,7 +21,7 @@ export default (state=defaultState,action)=>{
   }
   if(action.type==='deleteItem'){
     let newState=JSON.parse(JSON.stringify(state));
-    newState.list.splice(newState.index,1);
+    newState.list.splice(action.index,1);
     return newState;
   }
   return state;
