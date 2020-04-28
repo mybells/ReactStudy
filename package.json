@@ -1,3 +1,8 @@
 {
+  "scripts": {
+    "ReduxDemo1Start": "cd ReduxDemo/demo01 && yarn start",
+    "ReduxDemo2Start": "cd ReduxDemo/demo02 && yarn start",
+    "ReactStart": "cd React && yarn start"
+  },
   "dependencies": {}
 }
