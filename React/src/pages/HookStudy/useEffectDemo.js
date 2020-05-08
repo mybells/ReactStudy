@@ -1,7 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 function Index() {
-  useEffect(()=>{
+  useEffect(() => {
     console.log('Index页面')
     return () => {
       console.log('Index的return执行了')
@@ -11,7 +11,7 @@ function Index() {
 }
 
 function List() {
-  useEffect(()=>{
+  useEffect(() => {
     console.log('List页面')
     return () => {
       console.log('List的return执行了')
@@ -22,11 +22,11 @@ function List() {
 
 export default function useEffectDemo() {
   const [count, setcount] = useState(0)
-  const [obj, setobj] = useState({a:1})
+  const [obj, setobj] = useState({ a: 1 })
 
   useEffect(() => {
-    console.log('count数量：',count)
-    setobj(obj=>{obj.a++;return obj});
+    console.log('count数量：', count)
+    setobj(obj => { obj.a++; return obj });
     return () => {
       console.log('count的return执行了')
     }
@@ -35,10 +35,10 @@ export default function useEffectDemo() {
   return (
     <div>
       {count}
-      <button onClick={()=>setcount(count=>++count)}>加一</button>
+      <button onClick={() => setcount(count => ++count)}>加一</button>
       {/* {JSON.stringify(obj)} */}
       <div>
-        {count%2?<Index/>:<List/>}
+        {count % 2 ? <Index /> : <List />}
       </div>
     </div>
   )
