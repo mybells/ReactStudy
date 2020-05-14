@@ -4,9 +4,9 @@ export default class setStateDemo extends PureComponent {
   state = { count: { a: 1 } }
 
   btnClick = () => {
-    this.state.count.a++;
-    console.log(this.state.count)
-    this.setState({ count: this.state.count });
+    let count = this.state.count.a + 1; //Do not mutate state directly.
+    //++this.state.count.a; //Do not mutate state directly.
+    this.setState({ count: count });
   }
 
   render() {

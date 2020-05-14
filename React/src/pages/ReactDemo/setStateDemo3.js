@@ -4,7 +4,7 @@ export default class setStateDemo extends Component {
   state = { count: 1 }
 
   btnClick = () => {
-    let count=this.state.count+1;
+    let count = this.state.count + 1;
     this.setState({ count: count });
     console.log(this.state.count)//还是上一次的值，因为setState执行是异步的
 
@@ -28,3 +28,12 @@ export default class setStateDemo extends Component {
   }
 }
 /* setState是异步执行的 */
+
+/*
+组件更新的生命周期调用顺序如下：
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+*/

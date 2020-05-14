@@ -26,7 +26,7 @@ export default function useEffectDemo() {
 
   useEffect(() => {
     console.log('count数量：', count)
-    setobj(obj => { obj.a++; return obj });
+    //setobj(obj => { let temp = { ...obj }; temp.a++; return temp });//会导致无线更新. 要修改它, 把 [count] 设为第二个参数或者去除setobj在useEffect中
     return () => {
       console.log('count的return执行了')
     }
