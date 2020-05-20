@@ -10,7 +10,13 @@ export default function useEffectDemo() {
     }
   })
   console.log('useEffect 外面之后', count)
-
+  useEffect(() => {
+    /* 没有依赖任何变量，不写第二个参数还是默认传入了所有变量，改变触发 */
+    console.log(1)
+    return () => {
+      console.log(2)
+    }
+  })
   return (
     <div>
       {count}

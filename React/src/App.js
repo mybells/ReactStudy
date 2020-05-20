@@ -2,6 +2,7 @@ import React from 'react';
 import UseStateDemo from './pages/HookStudy/useStateDemo'
 import UseEffectDemo from './pages/HookStudy/useEffectDemo'
 import UseEffectDemo2 from './pages/HookStudy/useEffectDemo2'
+import GetOldValue from './pages/HookStudy/getOldValue'
 import SetStateDemo from './pages/ReactDemo/setStateDemo1'
 import SetStateDemo2 from './pages/ReactDemo/setStateDemo2'
 import SetStateDemo3 from './pages/ReactDemo/setStateDemo3'
@@ -13,13 +14,14 @@ function App() {
   return (
     <div>
       <h2>Hook Demo</h2>
-      <div>>**************useState是同步的**************</div>
+      <div>**************useState是同步的**************</div>
       <UseStateDemo />
-      <div>>**************useEffect中执行顺序**************</div>
+      <div>**************useEffect中执行顺序**************</div>
       <UseEffectDemo2 />
-      <div>>**************useEffect中return的用法**************</div>
+      <div>**************useEffect中return的用法**************</div>
       <UseEffectDemo />
-
+      <div>**************为什么我会在我的函数中看到陈旧的 props 和 state ？**************</div>
+      <GetOldValue />
       <h2>React Demo</h2>
       <div>**************setState将count设为原始值还是执行了render方法*************</div>
       <SetStateDemo />
