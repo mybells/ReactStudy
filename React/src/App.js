@@ -2,6 +2,7 @@ import React from 'react';
 import UseStateDemo from './pages/HookStudy/useStateDemo'
 import UseEffectDemo from './pages/HookStudy/useEffectDemo'
 import UseEffectDemo2 from './pages/HookStudy/useEffectDemo2'
+import UseEffectDemo3 from './pages/HookStudy/useEffectDemo3'
 import GetOldValue from './pages/HookStudy/getOldValue'
 import SetStateDemo from './pages/ReactDemo/setStateDemo1'
 import SetStateDemo2 from './pages/ReactDemo/setStateDemo2'
@@ -16,10 +17,12 @@ function App() {
       <h2>Hook Demo</h2>
       <div>**************useState是同步的**************</div>
       <UseStateDemo />
-      <div>**************useEffect中执行顺序**************</div>
-      <UseEffectDemo2 />
       <div>**************useEffect中return的用法**************</div>
       <UseEffectDemo />
+      <div>**************useEffect中执行顺序**************</div>
+      <UseEffectDemo2 />
+      <div>**************忽略依赖列表中 state，但这通常会引起 Bug**************</div>
+      <UseEffectDemo3 />
       <div>**************为什么我会在我的函数中看到陈旧的 props 和 state ？**************</div>
       <GetOldValue />
       <h2>React Demo</h2>
