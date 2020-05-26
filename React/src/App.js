@@ -9,7 +9,7 @@ import SetStateDemo2 from './pages/ReactDemo/setStateDemo2'
 import SetStateDemo3 from './pages/ReactDemo/setStateDemo3'
 import SetStateDemo4 from './pages/ReactDemo/setStateDemo4'
 import RefDemo from './pages/ReactDemo/RefDemo'
-
+import Parent from './pages/ReactDemo/父子传值/Parent'
 
 function App() {
   return (
@@ -36,6 +36,8 @@ function App() {
       <SetStateDemo4 />
       <div>**************Ref**************</div>
       <RefDemo />
+      <div>**************父子传值（数组和转义测试）**************</div>
+      <Parent />
     </div>
   );
 }
