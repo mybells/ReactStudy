@@ -10,6 +10,7 @@ import SetStateDemo3 from './pages/ReactDemo/setStateDemo3'
 import SetStateDemo4 from './pages/ReactDemo/setStateDemo4'
 import RefDemo from './pages/ReactDemo/RefDemo'
 import Parent from './pages/ReactDemo/父子传值/Parent'
+import Lifecycle from './pages/ReactDemo/lifecycle'
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       <UseEffectDemo3 />
       <div>**************为什么我会在我的函数中看到陈旧的 props 和 state ？**************</div>
       <GetOldValue />
+      <div>************** 16.3版本生命周期前后对比 **************</div>
+      <Lifecycle />
+
+
       <h2>React Demo</h2>
       <div>**************setState将count设为原始值还是执行了render方法*************</div>
       <SetStateDemo />
