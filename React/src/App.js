@@ -11,6 +11,7 @@ import SetStateDemo4 from './pages/ReactDemo/setStateDemo4'
 import RefDemo from './pages/ReactDemo/RefDemo'
 import Parent from './pages/ReactDemo/父子传值/Parent'
 import Lifecycle from './pages/ReactDemo/lifecycle'
+import ComponentDemo from './pages/ReactDemo/生命周期误区/ComponentDemo'
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
       <GetOldValue />
       <div>************** 16.3版本生命周期前后对比 **************</div>
       <Lifecycle />
+      <div>************** 只要父级重新渲染，getDerivedStateFromProps 和 componentWillReceiveProps 都会重新调用，不管 props 有没有变化。所以，在这两个方法内直接将 props 赋值到 state 是不安全的。 **************</div>
+      <ComponentDemo />
 
 
       <h2>React Demo</h2>

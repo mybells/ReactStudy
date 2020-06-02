@@ -11,10 +11,11 @@ class lifecycle extends Component {
   static defaultProps = {
     name: 1
   }
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log('getDerivedStateFromProps', props, state)
-  //   return state;
-  // }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log('getDerivedStateFromProps', props, state)
+    return state;
+  }
   componentDidMount = () => {
     console.log('componentDidMount');
   };
@@ -24,28 +25,28 @@ class lifecycle extends Component {
   }
 
   /* render后钩子函数 */
-  // getSnapshotBeforeUpdate(prevProps, prevState) {
-  //   console.log('getSnapshotBeforeUpdate', prevProps, prevState)
-  //   return 2
-  // }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('getSnapshotBeforeUpdate', prevProps, prevState)
+    return 2
+  }
   componentDidUpdate = (prevProps, prevState, snapShot) => {
     console.log('componentDidUpdate', prevProps, prevState, snapShot);
   };
 
 
   /* 不推荐使用，已过时 */
-  componentWillMount = () => {
-    console.log('componentWillMount');
-  };
-  componentWillReceiveProps = (nextProps) => {
-    //初始化不执行，props更新执行。16.3后不推荐使用，已过时，使用getDerivedStateFromProps替代。
-    //componentWillReceiveProps方法中第一个参数代表即将传入的新的Props
-    console.log("componentWillReceiveProps");
-  }
-  componentWillUpdate = (nextProps, nextState) => {
-    //render前执行
-    console.log('componentWillUpdate');
-  }
+  // componentWillMount = () => {
+  //   console.log('componentWillMount');
+  // };
+  // componentWillReceiveProps = (nextProps) => {
+  //   //初始化不执行，props更新执行。16.3后不推荐使用，已过时，使用getDerivedStateFromProps替代。
+  //   //componentWillReceiveProps方法中第一个参数代表即将传入的新的Props
+  //   console.log("componentWillReceiveProps");
+  // }
+  // componentWillUpdate = (nextProps, nextState) => {
+  //   //render前执行
+  //   console.log('componentWillUpdate');
+  // }
 
   static getDerivedStateFromError(error) {
     console.log('getDerivedStateFromError')
