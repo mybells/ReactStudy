@@ -9,7 +9,9 @@ import SetStateDemo2 from './pages/ReactDemo/setStateDemo2'
 import SetStateDemo3 from './pages/ReactDemo/setStateDemo3'
 import SetStateDemo4 from './pages/ReactDemo/setStateDemo4'
 import RefDemo from './pages/ReactDemo/RefDemo'
-import Parent from './pages/ReactDemo/父子传值/Parent'
+import Parent from './pages/ReactDemo/父子传值/特殊字符转义'
+import ChangeProps from './pages/ReactDemo/父子传值/子组件改变props导致父组件行为'
+import ArrayDemo from './pages/ReactDemo/数组render渲染'
 import Lifecycle from './pages/ReactDemo/lifecycle'
 import ComponentDemo from './pages/ReactDemo/生命周期误区/ComponentDemo'
 
@@ -44,8 +46,12 @@ function App() {
       <SetStateDemo4 />
       <div>**************Ref**************</div>
       <RefDemo />
-      <div>**************父子传值（数组和转义测试）**************</div>
+      <div>**************父子传值（转义字符测试）**************</div>
       <Parent />
+      <div>**************父子传值（数组render渲染）**************</div>
+      <ArrayDemo />
+      <div>**************父子传值（子组件改变props导致父组件行为）**************</div>
+      <ChangeProps />
     </div>
   );
 }

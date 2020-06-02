@@ -2,6 +2,8 @@
 
 实际上，只要父级重新渲染，getDerivedStateFromProps 和 componentWillReceiveProps 都会重新调用，不管 props 有没有变化。所以，在这两个方法内直接将 props 赋值到 state 是不安全的。 */
 
+import React, { Component } from 'react';
+
 // 子组件
 class PhoneInput extends Component {
   state = { phone: this.props.phone };
@@ -23,7 +25,7 @@ class PhoneInput extends Component {
 }
 
 // 父组件
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
