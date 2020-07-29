@@ -36,7 +36,8 @@ export default function useEffectDemo() {
     <div>
       {count}
       <button onClick={() => setcount(count => ++count)}>加一</button>
-      {/* {JSON.stringify(obj)} */}
+      <button onClick={() => setobj(obj => {obj.a=2;return obj})}>obj不会触发useEffect</button>
+      {JSON.stringify(obj)}
       <div>
         {count % 2 ? <Index /> : <List />}
       </div>

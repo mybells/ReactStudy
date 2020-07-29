@@ -7,8 +7,7 @@ export default function useEffectDemo() {
     // console.log(this)//undefined
     console.log('执行前：', obj);
     setobj((val) => {
-      // console.log(val===obj);//true,val是obj的引用,直接改变obj值不会更新视图
-
+      // console.log(val===obj);//true,val是obj的引用,直接改变obj值不会更新视图(val.a++;return val)
       let cloneObj = { ...obj };
       // console.log(cloneObj===obj);//false
       cloneObj.a++;

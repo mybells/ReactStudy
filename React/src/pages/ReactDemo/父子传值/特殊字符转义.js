@@ -26,7 +26,7 @@ class Child extends Component {
   render() {
     return (
       <div>
-        <div>{JSON.stringify('&lt;3')}: {this.props.msg} </div>
+        <div>{JSON.stringify('&lt;3')}: {JSON.stringify(this.props.msg)} </div>
         <div>{'<3'}: {this.props.msg2} </div>
         <div>{'<3'} {this.props.msg3} </div>
       </div>
