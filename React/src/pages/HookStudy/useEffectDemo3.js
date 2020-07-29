@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 //忽略依赖列表中 state，但这通常会引起 Bug
 export default function useEffectDemo() {
   const [count, setCount] = useState(0);
 
+  // useEffect(()=>{
+  //   setCount(count + 1); // 这个 effect 依赖于 `count` state
+  // })
+  // useEffect(()=>{
+  //   // 没更新前的count
+  //   console.log(count,1111)
+  // })
+  
   useEffect(() => {
     const id = setInterval(() => {
       setCount(count + 1); // 这个 effect 依赖于 `count` state
